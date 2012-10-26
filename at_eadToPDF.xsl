@@ -1563,28 +1563,10 @@
         </xsl:choose>
     </xsl:template>
 
-    <!-- Puts a space between sibling elements -->
-    <xsl:template match="child::*">
-        <xsl:if test="preceding-sibling::*">&#160;</xsl:if>
-        <xsl:apply-templates/>
-    </xsl:template>
-    
-    <xsl:template match="ead:p">
-        <fo:block margin-bottom="8pt">
-            <xsl:apply-templates/>
-        </fo:block>
-    </xsl:template>
-
-    <!--Formats a simple table. The width of each column is defined by the colwidth attribute in a colspec element.-->
-    <xsl:template match="ead:table">
-        <xsl:for-each select="tgroup">
-            <fo:table table-layout="fixed" width="100%" space-after="24pt" 
-                space-before="36pt" font-size="12pt" line-height="18pt" 
-                border-top="1pt solid #000" border-bottom="1pt solid #000">
-                <xsl:for-each select="ead:colspec">
-                    <fo:table-column column-width="{@colwidth}"/>
-                </xsl:for-each>
-                <fo:table-body>
+   I LOVE CATS
+   I LOVE CATS
+   I LOVE CATS
+   I LOVE CATS
                     <xsl:for-each select="ead:thead">
                         <xsl:for-each select="ead:row">
                             <fo:table-row>
