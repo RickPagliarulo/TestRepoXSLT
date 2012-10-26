@@ -66,46 +66,19 @@
        |       
     -->
     
-    <xsl:output method="xml" encoding="utf-8" indent="yes"/>
-    <xsl:strip-space elements="*"/>
-     <!--<xsl:include href="lookupListsPDF.xsl"/>-->
-    <xsl:include href="lookupListsPDF.xsl"/>
-    <xsl:template match="/">
-        <xsl:apply-templates/>
-    </xsl:template>
-    <xsl:template match="ead:ead">
-        <!--The following two variables headerString and pageHeader establish the title of the finding aid and substring long titles for display in the header -->
-        <xsl:variable name="headerString">
-            <xsl:choose>
-                <xsl:when test="ead:eadheader/ead:filedesc/ead:titlestmt/ead:titleproper">
-                    <xsl:choose>
-                        <xsl:when test="starts-with(ead:eadheader/ead:filedesc/ead:titlestmt/ead:titleproper,ead:eadheader/ead:filedesc/ead:titlestmt/ead:titleproper/ead:num)">
-                           <xsl:apply-templates select="/ead:ead/ead:archdesc/ead:did/ead:unittitle" mode="header"/>
-                        </xsl:when>
-                        <xsl:when test="ead:eadheader/ead:filedesc/ead:titlestmt/ead:titleproper/@type = 'filing'">
-                            <xsl:choose>
-                                <xsl:when test="count(ead:eadheader/ead:filedesc/ead:titlestmt/ead:titleproper) &gt; 1">
-                                    <xsl:apply-templates select="ead:eadheader/ead:filedesc/ead:titlestmt/ead:titleproper[not(@type='filing')]"/>            
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <xsl:apply-templates select="/ead:ead/ead:archdesc/ead:did/ead:unittitle" mode="header"/>        
-                                </xsl:otherwise>
-                            </xsl:choose>
-                        </xsl:when>
-                        <xsl:otherwise><xsl:apply-templates select="ead:eadheader/ead:filedesc/ead:titlestmt/ead:titleproper"/></xsl:otherwise>
-                    </xsl:choose>
-                </xsl:when>
-                <xsl:otherwise><xsl:apply-templates select="/ead:ead/ead:archdesc/ead:did/ead:unittitle" mode="header"/></xsl:otherwise>                
-            </xsl:choose>
-        </xsl:variable>
-        <xsl:variable name="pageHeader">
-            <xsl:value-of select="substring($headerString,1,100)"/><xsl:if test="string-length(normalize-space($headerString)) &gt; 100">...</xsl:if>
-        </xsl:variable>
-        <!--fo:root establishes the page types and layouts contained in the PDF, the finding aid consists of 4 distinct 
-            page types, the cover page, the table of contents, contents and the container list. To alter basic page apperence 
-            such as margins fonts alter the following page-masters.-->
-        <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
-            
+    CATS
+    CATS
+    CATS
+    CATS
+    CATS
+    CATS
+    CATS
+    CATS
+    CATS
+    CATS
+    CATS
+    CATS
+    CATS
             <!--xxxxPageLayoutxxxx -->  
             
             <!-- RP changing the margin-top and margin-bottom from .2 and .5 to .1 and .3 -->
