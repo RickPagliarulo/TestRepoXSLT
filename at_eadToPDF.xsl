@@ -38,33 +38,9 @@
         *******************************************************************
     -->
     
-    <!-- RP Adding in a Table of Contents for the Style Sheet.  As we use more of the formatting rules listed below, more entries
-    will be added to the table -->
+
     
-    <!--
-        ************************************************************************
-       |                        TABLE OF CONTENTS
-       |
-       |    xxxxPageLayoutxxxx       >      Layout of Pages
-       |    xxxxFooterxxxx           >      Contents of Footer Area
-       |    xxxxCoverxxxx            >      Contents of Cover Page
-       |    xxxxTOCxxxx              >      Generating Table of Contents
-       |    xxxxPageNumbersxxxx      >      Generating TOC Page Numbers
-       |    xxxxDAOxxxx              >      Digital Archival Objects
-       |    xxxxContainerxxxx        >      Collection Inventory Section
-       |
-       |
-       |
-       |
-       |
-       |
-       |
-       |
-       |
-       |
-       |
-       |       
-    -->
+
     
     <xsl:output method="xml" encoding="utf-8" indent="yes"/>
     <xsl:strip-space elements="*"/>
